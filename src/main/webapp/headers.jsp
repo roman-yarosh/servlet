@@ -1,4 +1,3 @@
-<%@ page import="java.util.Enumeration" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html; charset=UTF-8" language="java" %>
 
@@ -13,10 +12,10 @@
         <th>Header name</th>
         <th>Header value</th>
     </tr>
-    <c:forEach items="${headerValues.keySet()}" var="headerName">
+    <c:forEach items="${header.keySet()}" var="headerName">
         <tr>
-            <td><c:out value="${headerName}"</td>
-            <td><c:out value="${param.get(headerName)}"</td>
+            <td><c:out value="${headerName}"></c:out></td>
+            <td><c:out value="${header.get(headerName)}"></c:out></td>
         </tr>
     </c:forEach>
 </table>
