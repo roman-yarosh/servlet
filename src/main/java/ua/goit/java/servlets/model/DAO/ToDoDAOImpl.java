@@ -44,8 +44,15 @@ public class ToDoDAOImpl implements ToDoDAO {
     }
 
     @Override
-    public void deleteTask(ToDo toDo) {
-        toDoList.remove(toDo);
+    public void deleteTask(String id) {
+        if (id != null && id.length() > 0){
+            for (int i = 0; i < toDoList.size(); i++) {
+                if (id.equals(toDoList.get(i).getId())) {
+                    toDoList.remove(i);
+                    break;
+                }
+            }
+        }
     }
 
     @Override

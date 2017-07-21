@@ -13,7 +13,7 @@ public interface ToDoDAO {
 
     void setTaskDone(String id);
 
-    void deleteTask(ToDo toDo);
+    void deleteTask(String id);
 
     List<ToDo> getAllTasks();
 }
