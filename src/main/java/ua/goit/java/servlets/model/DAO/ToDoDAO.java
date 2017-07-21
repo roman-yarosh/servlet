@@ -11,7 +11,7 @@ public interface ToDoDAO {
 
     void addNewTask(ToDo toDo);
 
-    void setTaskDone(ToDo toDo);
+    void setTaskDone(String id);
 
     void deleteTask(ToDo toDo);
 

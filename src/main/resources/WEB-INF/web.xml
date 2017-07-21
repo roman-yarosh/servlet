@@ -10,14 +10,6 @@
     </description>
 
     <servlet>
-        <servlet-name>Clock</servlet-name>
-        <servlet-class>ua.goit.java.servlets.ClockServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>Hello</servlet-name>
-        <servlet-class>ua.goit.java.servlets.HelloServlet</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>ToDoServlet</servlet-name>
         <servlet-class>ua.goit.java.servlets.controller.ToDoServlet</servlet-class>
     </servlet>
@@ -28,6 +20,10 @@
     <servlet>
         <servlet-name>DoCreateToDo</servlet-name>
         <servlet-class>ua.goit.java.servlets.controller.DoCreateToDoServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SetDone</servlet-name>
+        <servlet-class>ua.goit.java.servlets.controller.SetDone</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -42,9 +38,12 @@
         <servlet-name>DoCreateToDo</servlet-name>
         <url-pattern>/doCreateToDo</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SetDone</servlet-name>
+        <url-pattern>/setDone</url-pattern>
+    </servlet-mapping>
 
     <welcome-file-list>
-        <welcome-file>home</welcome-file>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
 </web-app>

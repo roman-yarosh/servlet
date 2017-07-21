@@ -1,5 +1,6 @@
 package ua.goit.java.servlets.model.DAO;
 
+import com.sun.corba.se.impl.oa.toa.TOA;
 import ua.goit.java.servlets.model.entity.ToDo;
 
 import java.util.ArrayList;
@@ -29,11 +30,17 @@ public class ToDoDAOImpl implements ToDoDAO {
     }
 
     @Override
-    public void setTaskDone(ToDo toDo) {
-        int index = toDoList.indexOf(toDo);
-        ToDo toDoTemp = toDoList.get(index);
-        toDoTemp.setTaskDone(true);
-        toDoList.set(index, toDoTemp);
+    public void setTaskDone(String id) {
+        if (id != null && id.length() > 0){
+            for (int i = 0; i < toDoList.size(); i++) {
+                if (id.equals(toDoList.get(i).getId())) {
+                    ToDo toDo = toDoList.get(i);
+                    toDo.setTaskDone(true);
+                    toDoList.set(i,toDo);
+                    break;
+                }
+            }
+        }
     }
 
     @Override

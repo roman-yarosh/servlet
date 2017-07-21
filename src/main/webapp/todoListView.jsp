@@ -11,6 +11,8 @@
 
 <h3>TO DO List</h3>
 
+<p style="color: red;">${errorString}</p>
+
 <table border="1" cellpadding="5" cellspacing="1" >
     <tr>
         <th>ID</th>
