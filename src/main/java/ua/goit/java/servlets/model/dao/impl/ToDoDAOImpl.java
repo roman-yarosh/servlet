@@ -1,6 +1,6 @@
-package ua.goit.java.servlets.model.DAO;
+package ua.goit.java.servlets.model.dao.impl;
 
-import com.sun.corba.se.impl.oa.toa.TOA;
+import ua.goit.java.servlets.model.dao.ToDoDAO;
 import ua.goit.java.servlets.model.entity.ToDo;
 
 import java.util.ArrayList;
@@ -58,5 +58,19 @@ public class ToDoDAOImpl implements ToDoDAO {
     @Override
     public List<ToDo> getAllTasks() {
         return toDoList;
+    }
+
+    @Override
+    public boolean isDoneById(String id) {
+        ToDo toDo;
+        if (id != null && id.length() > 0){
+            for (int i = 0; i < toDoList.size(); i++) {
+                toDo = toDoList.get(i);
+                if (id.equals(toDo.getId())) {
+                    return toDo.isTaskDone();
+                }
+            }
+        }
+        return false;
     }
 }

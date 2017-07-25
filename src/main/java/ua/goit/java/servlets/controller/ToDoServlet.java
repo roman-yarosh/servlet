@@ -1,7 +1,6 @@
 package ua.goit.java.servlets.controller;
 
-import ua.goit.java.servlets.model.DAO.ToDoDAO;
-import ua.goit.java.servlets.model.DAO.ToDoDAOImpl;
+import ua.goit.java.servlets.model.dao.impl.ToDoDAOImpl;
 import ua.goit.java.servlets.model.entity.ToDo;
 
 import javax.servlet.RequestDispatcher;

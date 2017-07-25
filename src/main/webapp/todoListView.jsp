@@ -29,10 +29,14 @@
             <td>${todo.taskDate}</td>
             <td>${todo.taskDone}</td>
             <td>
-                <a href="setDone?id=${todo.id}">Set task done</a>
+                <c:if test="${todo.taskDone == false}">
+                    <a href="setDone?id=${todo.id}">Set task done</a>
+                </c:if>
             </td>
             <td>
-                <a href="deleteToDo?id=${todo.id}">Delete task</a>
+                <c:if test="${todo.taskDone == true}">
+                    <a href="deleteToDo?id=${todo.id}">Delete task</a>
+                </c:if>
             </td>
         </tr>
     </c:forEach>

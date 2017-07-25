@@ -1,4 +1,4 @@
-package ua.goit.java.servlets.model.DAO;
+package ua.goit.java.servlets.model.dao;
 
 import ua.goit.java.servlets.model.entity.ToDo;
 
@@ -16,4 +16,6 @@ public interface ToDoDAO {
     void deleteTask(String id);
 
     List<ToDo> getAllTasks();
+
+    boolean isDoneById(String id);
 }

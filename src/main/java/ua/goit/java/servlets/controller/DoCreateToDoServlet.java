@@ -1,7 +1,7 @@
 package ua.goit.java.servlets.controller;
 
-import ua.goit.java.servlets.model.DAO.ToDoDAO;
-import ua.goit.java.servlets.model.DAO.ToDoDAOImpl;
+import ua.goit.java.servlets.model.dao.ToDoDAO;
+import ua.goit.java.servlets.model.dao.impl.ToDoDAOImpl;
 import ua.goit.java.servlets.model.entity.ToDo;
 
 import javax.servlet.RequestDispatcher;
@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Date;
 
 /**
  * Created by Роман on 21.07.2017.
