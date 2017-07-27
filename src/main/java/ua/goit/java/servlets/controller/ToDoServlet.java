@@ -1,5 +1,6 @@
 package ua.goit.java.servlets.controller;
 
+import ua.goit.java.servlets.model.dao.ToDoDAO;
 import ua.goit.java.servlets.model.dao.impl.ToDoDAOImpl;
 import ua.goit.java.servlets.model.entity.ToDo;
 
@@ -18,7 +19,7 @@ public class ToDoServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ToDoDAOImpl toDoDAO = ToDoDAOImpl.getInstance();
+        ToDoDAO toDoDAO = ToDoDAOImpl.getInstance();
         List<ToDo> toDoList = toDoDAO.getAllTasks();
 
         request.setAttribute("todoList", toDoList);

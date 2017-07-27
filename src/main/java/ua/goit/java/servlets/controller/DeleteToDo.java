@@ -1,5 +1,6 @@
 package ua.goit.java.servlets.controller;
 
+import ua.goit.java.servlets.model.dao.ToDoDAO;
 import ua.goit.java.servlets.model.dao.impl.ToDoDAOImpl;
 
 import javax.servlet.ServletException;
@@ -15,7 +16,7 @@ public class DeleteToDo extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ToDoDAOImpl toDoDAO = ToDoDAOImpl.getInstance();
+        ToDoDAO toDoDAO = ToDoDAOImpl.getInstance();
         String errorString = null;
 
         String id = request.getParameter("id");
